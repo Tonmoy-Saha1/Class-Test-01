@@ -23,6 +23,7 @@
                         <th>Status</th>
                         <th>Accept</th>
                         <th>Reject</th>
+                        <th>Remarks</th>
                     </thead>
                     <tbody>
                         <?php
@@ -36,6 +37,7 @@
                                     <td><?php echo $t0['status1'];?></td>
                                     <td><a href="accept.php?id=<?php echo $t0['id'];?>">Accept</a></td>
                                     <td><a href="reject.php?id=<?php echo $t0['id'];?>">Reject</a></td>
+                                    <td><?php echo $t0['remarks'];?></td>
                                 </tr>
                                 <?php
                             }
