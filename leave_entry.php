@@ -10,5 +10,5 @@
 
 
 
-	// echo "<p><a href=read.php>READ all records</a>";
+	echo "<p><a href=leave_application_dashboard.php>READ all records</a>";
 ?>
