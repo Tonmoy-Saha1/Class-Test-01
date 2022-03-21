@@ -29,16 +29,36 @@
                         <?php
                             foreach ($table as $t0) {
                                 ?>
-                                <tr>
-                                    <td><?php echo $t0['id'];?></td>
-                                    <td><?php echo $t0['employee_name'];?></td>
-                                    <td><?php echo $t0['leave_start'];?></td>
-                                    <td><?php echo $t0['leave_end'];?></td>
-                                    <td><?php echo $t0['status1'];?></td>
-                                    <td><a href="accept.php?id=<?php echo $t0['id'];?>">Accept</a></td>
-                                    <td><a href="reject.php?id=<?php echo $t0['id'];?>">Reject</a></td>
-                                    <td><?php echo $t0['remarks'];?></td>
-                                </tr>
+                                <?php
+                                if($t0['status1']=="PENDING"){
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $t0['id'];?></td>
+                                        <td><?php echo $t0['employee_name'];?></td>
+                                        <td><?php echo $t0['leave_start'];?></td>
+                                        <td><?php echo $t0['leave_end'];?></td>
+                                        <td><?php echo $t0['status1'];?></td>
+                                        <td><a href="accept.php?id=<?php echo $t0['id'];?>">Accept</a></td>
+                                        <td><a href="reject.php?id=<?php echo $t0['id'];?>">Reject</a></td>
+                                        <td><?php echo $t0['remarks'];?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                else{
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $t0['id'];?></td>
+                                        <td><?php echo $t0['employee_name'];?></td>
+                                        <td><?php echo $t0['leave_start'];?></td>
+                                        <td><?php echo $t0['leave_end'];?></td>
+                                        <td><?php echo $t0['status1'];?></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><?php echo $t0['remarks'];?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
                                 <?php
                             }
                         ?>
