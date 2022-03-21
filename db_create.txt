@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS Leave_Management;
+
+CREATE TABLE LEAVE_ENTRY(
+    id int AUTO_INCREMENT,
+    employee_name VARCHAR(15),
+    leave_start VARCHAR(30),
+    leave_end VARCHAR(30),
+    status1 VARCHAR(50),
+    remarks VARCHAR(100),
+    PRIMARY KEY(id)
+);
